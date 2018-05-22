@@ -48,7 +48,6 @@ do
         echo "Invalid Input."
         exit -1
     fi
-    sum=$((sum + x))
+    sum=$(awk "BEGIN {print $sum+$x; exit}")
 done
-#printf "%.3f\n" `echo "$((sum/size))"`
-echo "scale=3; $sum / $size" | bc
+printf "%.3f\n" $(bc -l <<< "$sum/$size")
