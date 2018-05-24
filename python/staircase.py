@@ -55,7 +55,5 @@ def main():
     number = int(number)
     staircase(number)
 
-    #print(fibonacci(number))
-
 if __name__ == '__main__':
     main()
