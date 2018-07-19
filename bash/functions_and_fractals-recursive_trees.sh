@@ -193,17 +193,17 @@ function draw_tree {
     fi
     number_of_trees=$1
 
-    #initial column is the middle of the rows size
+    #initial column is the middle of the column size
     initialcolumn=$((NUMBER_COLUMNS / 2))
 
     for (( current_tree=1; current_tree<=number_of_trees; current_tree++))
     do
         # tree's size, from bottom to top, is as follow:
-        # tree #1: 32
-        # tree #2: 16
-        # tree #3: 8
-        # tree #4: 4
-        # tree #5: 1
+        # tree #1 size: 32
+        # tree #2 size: 16
+        # tree #3 size: 8
+        # tree #4 size: 4
+        # tree #5 size: 1
         power=$[6 - $current_tree]
         size=$[2**$power]
         half_size=$((size / 2))
